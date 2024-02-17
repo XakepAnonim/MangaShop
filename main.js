@@ -20,11 +20,19 @@ let li_login = document.createElement('a'),
 
 function checkAuth() {
     if (isAuth) {
-        menu.appendChild(li_home);
+        li_home.remove();
+        li_reg.remove();
+        li_login.remove();
+
+        menu.append(li_home);
         menu.appendChild(li_cart);
         menu.appendChild(li_logout);
 
     } else {
+        li_home.remove();
+        li_cart.remove();
+        li_logout.remove();
+
         menu.appendChild(li_home);
         menu.appendChild(li_reg);
         menu.appendChild(li_login);
@@ -38,7 +46,8 @@ li_login.querySelector('a').addEventListener('click', login);
 li_reg.innerHTML = `<a href='#' class='menu__item'>Registration</a>`;
 li_reg.querySelector('a').addEventListener('click', registration);
 
-li_logout.innerHTML = `<a href='/' class='menu__item' onclick='logout(event)'>Logout</a>`;
+li_logout.innerHTML = `<a href='/' class='menu__item'>Logout</a>`;
+li_logout.querySelector('a').addEventListener('click', logout);
 
 li_home.innerHTML = `<a href='/' class='menu__item'>Home</a>`;
 li_home.querySelector('a').addEventListener('click', showHome);
