@@ -32,10 +32,10 @@ function checkAuth() {
 }
 checkAuth();
 
-li_login.innerHTML = `<a href='/login' class='menu__item''>Login</a>`;
+li_login.innerHTML = `<a href='#' class='menu__item''>Login</a>`;
 li_login.querySelector('a').addEventListener('click', login);
 
-li_reg.innerHTML = `<a href='/registration' class='menu__item'>Registration</a>`;
+li_reg.innerHTML = `<a href='#' class='menu__item'>Registration</a>`;
 li_reg.querySelector('a').addEventListener('click', registration);
 
 li_logout.innerHTML = `<a href='/' class='menu__item' onclick='logout(event)'>Logout</a>`;
