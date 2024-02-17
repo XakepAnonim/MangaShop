@@ -38,6 +38,7 @@ function checkAuth() {
         menu.appendChild(li_login);
     }
 }
+
 checkAuth();
 
 li_login.innerHTML = `<a href='#' class='menu__item''>Login</a>`;
@@ -54,6 +55,10 @@ li_home.querySelector('a').addEventListener('click', showHome);
 
 li_cart.innerHTML = `<a href='/cart' class='menu__item'>Cart</a>`;
 li_cart.querySelector('a').addEventListener('click', showCart);
+
+export function index() {
+    window.location.href = 'index.html';
+}
 
 function login() {
     window.location.href = 'login.html';
